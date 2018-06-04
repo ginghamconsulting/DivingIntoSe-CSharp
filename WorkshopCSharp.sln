@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_1", "Lab_1\Lab_1.csproj", "{986F57E2-0489-4CB9-9C99-DB79B132A978}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Final", "Lab_1\Final.csproj", "{986F57E2-0489-4CB9-9C99-DB79B132A978}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
