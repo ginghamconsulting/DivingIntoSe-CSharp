@@ -13,8 +13,13 @@ namespace Lab_1.Pages
             this.driver = _driver;
         }
 
+        public void Visit(String url)
+        {
+            driver.Navigate().GoToUrl(url);
+        }
+
         public IWebElement Find(By locator){
-            return this.driver.FindElement(locator);
+            return driver.FindElement(locator);
         }
 
         public IWebElement Find(By locator, int timeout){
@@ -45,6 +50,17 @@ namespace Lab_1.Pages
             catch(NoSuchElementException){
                 return false;
             }
+        }
+        
+        public Boolean Displayed(By locator, int timeout){
+            try{
+                WebDriverWait wait = new WebDriverWait(this.driver, new TimeSpan(timeout));
+                wait.Until(ExpectedConditions.ElementToBeClickable(locator));
+            }
+            catch(TimeoutException){
+                return false;
+            }
+            return true;
         }
     }
 }
