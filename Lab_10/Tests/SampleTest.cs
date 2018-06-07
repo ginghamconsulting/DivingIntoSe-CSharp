@@ -19,7 +19,7 @@ namespace Lab_10.Tests
             var one = Login.With("AndrewLO1", "Pselenium");
             var two = one.EnterOptimalLenderPage();
             var three = two.NewSearch();
-            var four = three.SearchFor(new LoanSearch(100000, 200000, 650, 15));
+            var four = three.SearchFor(new LoanSearch(100000, 200000, 650, 15, LoanSearch.CountyOptions.Blount));
             var five = four.Search();
             var six = five.ExpandLender(1);
             var seven = six.LockRate(1);

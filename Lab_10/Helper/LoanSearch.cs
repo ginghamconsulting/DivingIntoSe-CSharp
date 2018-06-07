@@ -17,13 +17,14 @@ namespace Lab_10.Helper
             Montgomery, Morgan, Perry, Pickens, Pike, Randolph, Russell, Shelby, StClair, Sumter,
             Talladega, Tallapoosa, Tuscaloosa, Walker, Washington, Wilcox, Winston
         };
-        public LoanSearch(int BaseLoanAmount, int EstimatedValue, int BorrowerFICO, int DTIRatio)
+        public LoanSearch(int BaseLoanAmount, int EstimatedValue, int BorrowerFICO, int DTIRatio, CountyOptions county)
         {
             this.BaseLoanAmount = BaseLoanAmount;
             this.EstimatedValue = EstimatedValue;
             this.BorrowerFICO = BorrowerFICO;
             this.DTIRatio = DTIRatio;
             this.HasCounty = false;
+            SetCounty(county);
         }
 
         public bool HasCounty { get; set; }

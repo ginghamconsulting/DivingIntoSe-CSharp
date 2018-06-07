@@ -6,11 +6,11 @@ namespace Lab_10.Pages
 {
     public class ConfigurationPage : BasePage
     {
-        private String Title = "Entity Heirarchy";
+        private String PageTitle = "Entity Heirarchy";
 
         public ConfigurationPage(IWebDriver driver) : base(driver)
         {
-            Assert.That(Title() == Title);
+            Assert.That(Title() == PageTitle);
         }
     }
 }

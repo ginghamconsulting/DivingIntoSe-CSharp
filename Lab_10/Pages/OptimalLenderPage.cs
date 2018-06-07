@@ -6,12 +6,12 @@ namespace Lab_10.Pages
 {
     public class OptimalLenderPage : BasePage
     {
-        private String Title = "Secondary Queue";
+        private String PageTitle = "Secondary Queue";
         private By SearchButton = By.CssSelector("a[link_href='product_search.aspx']");
 
         public OptimalLenderPage(IWebDriver driver) : base(driver)
         {
-            Assert.That(Title() == this.Title);
+            Assert.That(Title() == this.PageTitle);
         }
 
 

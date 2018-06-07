@@ -5,7 +5,7 @@ namespace Lab_6
 {
     public class BasePage
     {
-        private IWebDriver driver;
+        protected IWebDriver driver;
 
         public BasePage(IWebDriver driver)
         {

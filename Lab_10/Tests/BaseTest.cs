@@ -23,7 +23,7 @@ namespace Lab_10.Tests
 
         [TearDown]
         public void Teardown(){
-            //driver.Quit();
+            driver.Quit();
         }
     }
 }

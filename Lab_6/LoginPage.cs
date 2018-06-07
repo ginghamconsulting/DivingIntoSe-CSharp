@@ -14,7 +14,6 @@ namespace Lab_6
         private By submitButton = By.CssSelector("button");
         private By successMessageLocator = By.CssSelector(".flash.success");
         private By failureMessageLocator = By.CssSelector(".flash.error");
-        private IWebDriver driver;
 
         public LoginPage(IWebDriver driver) : base(driver)
         {
