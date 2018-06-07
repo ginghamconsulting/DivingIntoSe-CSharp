@@ -44,7 +44,8 @@ namespace Lab_10.Helper
 
         public LoanSearch SetCounty()
         {
-            return SetCounty(RandomEnum<LoanSearch.CountyOptions>());
+            SetCounty(RandomEnum<LoanSearch.CountyOptions>());
+            return this;
         }
 
         public CountyOptions County

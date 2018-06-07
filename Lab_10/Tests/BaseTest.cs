@@ -1,4 +1,5 @@
 ﻿using System;
+using Lab_10.Pages;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -9,6 +10,7 @@ namespace Lab_10.Tests
     public class BaseTest
     {
         public IWebDriver driver;
+        public LoginPage Login;
 
         public BaseTest()
         {}
@@ -16,11 +18,12 @@ namespace Lab_10.Tests
         [SetUp]
         public void Setup(){
             this.driver = new ChromeDriver();
+            this.Login = new LoginPage(this.driver);
         }
 
         [TearDown]
         public void Teardown(){
-            driver.Quit();
+            //driver.Quit();
         }
     }
 }

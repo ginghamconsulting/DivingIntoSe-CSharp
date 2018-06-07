@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
@@ -25,6 +27,11 @@ namespace Lab_10.Pages
         public IWebElement Find(By locator){
             return driver.FindElement(locator);
         }
+
+        public IList<IWebElement> Finds(By locator)
+        {
+            return driver.FindElements(locator);
+        } 
 
         public IWebElement Find(By locator, int timeout){
             WebDriverWait wait = new WebDriverWait(this.driver, new TimeSpan(timeout));
