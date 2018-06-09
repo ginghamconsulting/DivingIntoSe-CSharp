@@ -1,17 +1,19 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
+using NUnit.Framework;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Lab_7")]
+[assembly: AssemblyTitle("Lab_8")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Lab_7")]
+[assembly: AssemblyProduct("Lab_8")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
+[assembly: Parallelizable(ParallelScope.Fixtures)]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
@@ -19,7 +21,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("3B398C4F-33F4-459D-A815-BAB4A08936A0")]
+[assembly: Guid("61E9734C-E919-410F-B654-F72F6D91003E")]
 
 // Version information for an assembly consists of the following four values:
 //

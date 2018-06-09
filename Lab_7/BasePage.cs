@@ -40,11 +40,13 @@ namespace Lab_7
         }
         public Boolean Displayed(By locator, int timeout){
             try{
-                return Find(locator).Displayed;
+                WebDriverWait wait = new WebDriverWait(this.driver, new TimeSpan(0,0,timeout));
+                wait.Until(ExpectedConditions.ElementToBeClickable(locator));
             }
-            catch(NoSuchElementException){
+            catch(TimeoutException){
                 return false;
             }
+            return true;
         }
     }
 }

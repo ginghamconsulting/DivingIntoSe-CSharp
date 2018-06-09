@@ -1,7 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 using OpenQA.Selenium;
-namespace Lab_6
+namespace Lab_5_Final
 {
     public class LoginPage : BasePage
     {

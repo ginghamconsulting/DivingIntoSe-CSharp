@@ -1,36 +1,32 @@
 ﻿using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
 
 namespace Lab_7
 {
-    public class DynamicLoadingTest
+    [Parallelizable(ParallelScope.All)]
+    public class DynamicLoadingTest : BaseTest
     {
-        private IWebDriver driver;
-        private DynamicLoadingPage dynamicLoading;
+        //private DynamicLoadingPage dynamicLoading;
 
-        [SetUp]
-        public void setUp() {
-            driver = new ChromeDriver();
-            dynamicLoading = new DynamicLoadingPage(driver);
+        public DynamicLoadingTest()
+        {
+            //dynamicLoading = new DynamicLoadingPage(driver);
+
         }
-
+        
         [Test]
-        public void hiddenElementLoads() {
+        public void HiddenElementLoads()
+        {
+            DynamicLoadingPage dynamicLoading = new DynamicLoadingPage(driver);
             dynamicLoading.LoadExample("1");
             Assert.True(dynamicLoading.FinishTextPresent(), "finish text didn't display after loading");
         }
 
         [Test]
-        public void elementAppears() {
+        public void ElementAppears() {
+            DynamicLoadingPage dynamicLoading = new DynamicLoadingPage(driver);
+
             dynamicLoading.LoadExample("2");
             Assert.True(dynamicLoading.FinishTextPresent(), "finish text didn't render after loading");
-        }
-
-        [TearDown]        
-        public void TearDown() {
-            driver.Quit();
         }
     }
 }

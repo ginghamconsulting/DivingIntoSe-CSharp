@@ -1,7 +1,7 @@
 ﻿using System;
 using OpenQA.Selenium;
 
-namespace Lab_8
+namespace Lab_6
 {
     public class DynamicLoadingPage : BasePage
     {

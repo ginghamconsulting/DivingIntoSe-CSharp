@@ -1,4 +1,4 @@
-﻿namespace Lab_8
+﻿namespace Lab_6
 {
     public class Class1
     {

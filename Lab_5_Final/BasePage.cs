@@ -1,12 +1,11 @@
 ﻿using System;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
 
-namespace Lab_8
+namespace Lab_5_Final
 {
     public class BasePage
     {
-        private IWebDriver driver;
+        protected IWebDriver driver;
 
         public BasePage(IWebDriver driver)
         {
@@ -26,19 +25,11 @@ namespace Lab_8
             Find(locator).Click();
         }
 
-        public void Type( String text, By locator){
+        public void Type(String text, By locator){
             Find(locator).SendKeys(text);
         }
 
         public Boolean Displayed(By locator){
-            try{
-                return Find(locator).Displayed;
-            }
-            catch(NoSuchElementException){
-                return false;
-            }
-        }
-        public Boolean Displayed(By locator, int timeout){
             try{
                 return Find(locator).Displayed;
             }

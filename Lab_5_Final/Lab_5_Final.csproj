@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8EB12841-DB68-4631-9A14-6BC884345127}</ProjectGuid>
+    <ProjectGuid>{4DE78226-F802-4193-9833-D036B5BB9E72}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lab_9</RootNamespace>
-    <AssemblyName>Lab_9</AssemblyName>
+    <RootNamespace>Lab_5_Final</RootNamespace>
+    <AssemblyName>Lab_5_Final</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -49,26 +49,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Helper\Loan.cs" />
-    <Compile Include="Helper\RandomEnum.cs" />
-    <Compile Include="Helper\SearchResult.cs" />
-    <Compile Include="Pages\BasePage.cs" />
-    <Compile Include="Pages\ConfigurationPage.cs" />
-    <Compile Include="Pages\DashboardPage.cs" />
-    <Compile Include="Pages\LenderSearchPage.cs" />
-    <Compile Include="Pages\LenderSearchResultsPage.cs" />
-    <Compile Include="Pages\LockPage.cs" />
-    <Compile Include="Pages\LoginPage.cs" />
-    <Compile Include="Pages\OptimalLenderPage.cs" />
-    <Compile Include="Pages\SpecificLenderResults.cs" />
+    <Compile Include="BasePage.cs" />
+    <Compile Include="LoginPage.cs" />
+    <Compile Include="LoginTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\BaseTest.cs" />
-    <Compile Include="Tests\SampleTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="allureConfig.json" />
-    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -78,7 +64,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\NUnit.3.10.1\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.10.1\build\NUnit.props'))" />
   </Target>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
          Other similar extension points exist, see Microsoft.Common.targets.
     <Target Name="BeforeBuild">
     </Target>
