@@ -1,21 +1,26 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 
 namespace Lab_7
 {
+    [TestFixture("Chrome")]
+    [TestFixture("Firefox")]
     [Parallelizable(ParallelScope.All)]
     public class DynamicLoadingTest : BaseTest
     {
-        //private DynamicLoadingPage dynamicLoading;
+        private DynamicLoadingPage dynamicLoading;
 
-        public DynamicLoadingTest()
+        public DynamicLoadingTest(String browser) : base(browser)
         {
-            //dynamicLoading = new DynamicLoadingPage(driver);
+//            setUp();
+//            dynamicLoading = new DynamicLoadingPage(driver);
 
         }
         
         [Test]
         public void HiddenElementLoads()
         {
+            setUp();
             DynamicLoadingPage dynamicLoading = new DynamicLoadingPage(driver);
             dynamicLoading.LoadExample("1");
             Assert.True(dynamicLoading.FinishTextPresent(), "finish text didn't display after loading");
@@ -23,6 +28,7 @@ namespace Lab_7
 
         [Test]
         public void ElementAppears() {
+            setUp();
             DynamicLoadingPage dynamicLoading = new DynamicLoadingPage(driver);
 
             dynamicLoading.LoadExample("2");

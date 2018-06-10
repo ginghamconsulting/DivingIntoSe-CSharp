@@ -58,6 +58,7 @@
     <Compile Include="Pages\DashboardPage.cs" />
     <Compile Include="Pages\LenderSearchPage.cs" />
     <Compile Include="Pages\LenderSearchResultsPage.cs" />
+    <Compile Include="Pages\LoanBasePage.cs" />
     <Compile Include="Pages\LockPage.cs" />
     <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Pages\OptimalLenderPage.cs" />

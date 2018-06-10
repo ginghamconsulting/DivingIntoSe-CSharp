@@ -1,10 +1,6 @@
-﻿using System;
-using System.Diagnostics.PerformanceData;
-using static Lab_10.Helper.EnumHelper;
-
-namespace Lab_10.Helper
+﻿namespace Lab_8.Helper
 {
-    public class LoanSearch
+    public class Loan
     {
 
         public enum CountyOptions 
@@ -17,7 +13,7 @@ namespace Lab_10.Helper
             Montgomery, Morgan, Perry, Pickens, Pike, Randolph, Russell, Shelby, StClair, Sumter,
             Talladega, Tallapoosa, Tuscaloosa, Walker, Washington, Wilcox, Winston
         };
-        public LoanSearch(int BaseLoanAmount, int EstimatedValue, int BorrowerFICO, int DTIRatio, CountyOptions county)
+        public Loan(int BaseLoanAmount, int EstimatedValue, int BorrowerFICO, int DTIRatio, CountyOptions county)
         {
             this.BaseLoanAmount = BaseLoanAmount;
             this.EstimatedValue = EstimatedValue;
@@ -37,26 +33,19 @@ namespace Lab_10.Helper
 
         public int BaseLoanAmount { get; set; }
 
-        public LoanSearch SetCounty(CountyOptions county)
+        public Loan SetCounty(CountyOptions county)
         {
+            this.HasCounty = true;
             this.County = county;
             return this;
         }
 
-        public LoanSearch SetCounty()
-        {
-            SetCounty(RandomEnum<LoanSearch.CountyOptions>());
-            return this;
-        }
+        public CountyOptions County { get; set; }
 
-        public CountyOptions County
+        public Loan SetCounty()
         {
-            get { return this.County;}
-            set
-            {
-                this.HasCounty = true;
-                this.County = value;
-            }
+            SetCounty(EnumHelper.RandomEnum<Loan.CountyOptions>());
+            return this;
         }
     }
 }
