@@ -18,6 +18,7 @@ namespace Lab_3
         [Test]
         public void LoginTest()
         {
+            driver.Url = "http://the-internet.herokuapp.com/login";
             driver.FindElement(By.Id("username")).SendKeys("tomsmith");
             driver.FindElement(By.Id("password")).SendKeys("SuperSecretPassword!");
             driver.FindElement(By.CssSelector("#login button[type='submit']")).Click();
