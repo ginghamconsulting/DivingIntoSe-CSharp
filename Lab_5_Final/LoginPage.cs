@@ -5,9 +5,6 @@ namespace Lab_5_Final
 {
     public class LoginPage : BasePage
     {
-        //TODO: Follow Lab 5 Directions
-
-
         private By loginFormLocator = By.Id("login");
         private By usernameLocator = By.Id("username");
         private By passwordLocator = By.Id("password");
@@ -24,18 +21,18 @@ namespace Lab_5_Final
         public void With(String username, String password)
         {
             Type(username, usernameLocator);
-            driver.FindElement(passwordLocator).SendKeys(password);
-            driver.FindElement(submitButton).Click();
+            Type(password,passwordLocator);
+            Click(submitButton);
         }
 
         public Boolean SuccessMessagePresent()
         {
-            return driver.FindElement(successMessageLocator).Displayed;
+            return Displayed(successMessageLocator);
         }
 
         public Boolean FailureMessagePresent()
         {
-            return driver.FindElement(failureMessageLocator).Displayed;
+            return Displayed(failureMessageLocator);
         }
     }
 }
