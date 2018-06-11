@@ -2,7 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace Lab_6
+namespace Lab_6_Final
 {
     public class DynamicLoadingTest
     {

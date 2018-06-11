@@ -8,8 +8,8 @@
     <ProjectGuid>{3B398C4F-33F4-459D-A815-BAB4A08936A0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lab_6</RootNamespace>
-    <AssemblyName>Lab_6</AssemblyName>
+    <RootNamespace>Lab_6_Final</RootNamespace>
+    <AssemblyName>Lab_6_Final</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

@@ -2,7 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
-namespace Lab_6
+namespace Lab_6_Final
 {
     public class BasePage
     {
