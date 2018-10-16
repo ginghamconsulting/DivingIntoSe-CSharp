@@ -1,10 +1,10 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 
-namespace Project_1
+namespace Lab_1
 {
     [TestFixture]
     public class Class1
@@ -17,9 +17,9 @@ namespace Project_1
             driver.Quit();
         }
         [Test]
-        public void IE_Test()
+        public void FF_Test()
         {
-            IWebDriver driver = new InternetExplorerDriver();
+            IWebDriver driver = new FirefoxDriver();
             driver.Navigate().GoToUrl("http://the-internet.herokuapp.com");
             driver.Quit();
         }
