@@ -39,3 +39,7 @@ Thumbs.db
 
 # dotCover
 *.dotCover
+
+# vuepress changes
+*/*.csharp
+*/*/AssemblyInfo.csharp
