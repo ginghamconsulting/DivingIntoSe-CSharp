@@ -1,0 +1,26 @@
+version: 2
+updates:
+- package-ecosystem: nuget
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: Selenium.WebDriver.ChromeDriver
+    versions:
+    - 88.0.4324.9600
+    - 89.0.4389.2300
+  - dependency-name: Microsoft.NET.Test.Sdk
+    versions:
+    - 16.8.3
+    - 16.9.1
+  - dependency-name: Microsoft.CodeCoverage
+    versions:
+    - 16.8.3
+    - 16.9.1
+  - dependency-name: Allure.Commons
+    versions:
+    - 3.5.0.4
+  - dependency-name: Newtonsoft.Json
+    versions:
+    - 12.0.3
